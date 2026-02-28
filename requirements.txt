@@ -1,0 +1,6 @@
+groq
+SpeechRecognition
+pyttsx3
+gTTS
+pygame
+pyaudio
