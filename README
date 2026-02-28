@@ -1,0 +1,78 @@
+🚀 SANCHESI AI: Ultimate Glassmorphism Desktop Assistant
+SANCHESI AI is a sophisticated desktop application that combines the power of High-Performance LLMs (via Groq API) with a stunning, modern Glassmorphism user interface built entirely in Python.
+
+Unlike standard AI wrappers, SANCHESI AI features a custom-engineered UI engine using Tkinter and Pillow to achieve real-time transparency, blurred panels, and dynamic emotional states.
+
+✨ Key Features
+🎨 Next-Gen UI/UX
+Native Glassmorphism: Custom "GlassButton" and "StyledToplevel" classes that simulate frosted glass and transparency.
+
+Dynamic Backgrounds: Real-time generated linear gradients that adapt to window resizing.
+
+Markdown Support: Rich text rendering including bold, italics, headers, and syntax-highlighted code blocks.
+
+🧠 Intelligence & Personalities
+Groq API Integration: Blazing fast responses using models like Llama 3 or Mixtral.
+
+Modular Personalities: Switch between roles like Energetic Teacher, Wise Philosopher, Technical Expert, and more.
+
+Contextual Emotions: The AI detects the mood of the conversation and updates its avatar and status (Happy, Thinking, Surprised, etc.).
+
+🎙 Multimedia & Voice
+STT (Speech-to-Text): Hands-free interaction using the SpeechRecognition library.
+
+TTS (Text-to-Speech): High-quality Ukrainian and English voice synthesis via gTTS and pygame.
+
+Auto-Voice Mode: Toggle automatic reading of every AI response.
+
+🗂 Session Management
+Multi-Chat Support: Create, rename, and switch between different chat threads.
+
+Auto-Save: All conversations are locally cached in JSON format within the /sessions folder.
+
+Backups: Built-in tool to export and secure your chat history.
+
+🛠 Tech Stack
+Language: Python 3.10+
+
+GUI: Tkinter (Standard Library)
+
+Graphics: Pillow (PIL) for advanced transparency and image processing.
+
+AI Engine: Groq Python SDK.
+
+Audio: gTTS (Google Text-to-Speech) & pygame.mixer.
+
+Speech: SpeechRecognition & PyAudio.
+
+🚀 Installation & Setup
+1. Clone the Repository
+Bash
+git clone https://github.com/sanchesi/sanchesi-ai.git
+cd sanchesi-ai
+2. Install Dependencies
+Bash
+pip install groq pillow gTTS pygame SpeechRecognition PyAudio
+Note: If you are on Linux, you may need sudo apt-get install python3-tk.
+
+3. Configure API Key
+Open the script and locate the API_KEY variable:
+
+Python
+API_KEY = "your_groq_api_key_here"
+4. Assets Setup
+Ensure you have an avatars/ folder in the root directory with the following images (80x80px recommended):
+
+avatar_neutral.png, avatar_happy.png, avatar_thinking.png, avatar_sad.png, etc.
+
+🖥 Usage
+Sending Messages: Type in the bottom input field and press Enter or click Send.
+
+Voice Input: Click the "Listen Now" button in the sidebar to speak.
+
+Tools: Use the sidebar to generate poems, stories, or code snippets with one click.
+
+Management: Right-click or use the sidebar to rename chats or clear history.
+
+📜 License
+Distributed under the MIT License. See LICENSE for more information.
