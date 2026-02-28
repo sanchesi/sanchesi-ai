@@ -1,10 +1,12 @@
-# 🎨 Гайд по аватарам
 
-## 📁 Структура папки avatars
 
-Ваші аватари мають бути в папці `avatars/` поруч з `yrok2_gui.py`
+# 🎨 Avatar Guide
 
-```
+## 📁 The `avatars` Folder Structure
+
+Your avatars must be placed in the `avatars/` folder right next to your `yrok2_gui.py` file.
+
+```text
 PythonProject/
 ├── yrok2_gui.py
 ├── avatars/
@@ -13,121 +15,140 @@ PythonProject/
 │   ├── avatar_furious.png
 │   ├── avatar_sad.png
 │   ├── avatar_angry.png
+
 ```
 
-## 🖼️ Назви файлів
+## 🖼️ File Names
 
-Кожна емоція має свій файл:
+Each emotion has its own specific file name:
 
-| Емоція | Файл | Коли використовується |
-|--------|------|----------------------|
-| Neutral | `avatar_neutral.png` | Звичайний стан |
-| Happy | `avatar_happy.png` | Подяка, привітання |
-| Confused | `avatar_confused.png` | Здивування |
-| Sad | `avatar_sad.png` | Помилка |
-| Angry | `avatar_angry.png` | Роздратування |
+| Emotion | File Name | When it is used |
+| --- | --- | --- |
+| Neutral | `avatar_neutral.png` | Default/Normal state |
+| Happy | `avatar_happy.png` | Gratitude, greetings |
+| Confused | `avatar_confused.png` | Surprise, not understanding |
+| Sad | `avatar_sad.png` | Errors, issues |
+| Angry | `avatar_angry.png` | Annoyance, irritation |
 
+## 📐 Size Recommendations
 
-## 📐 Рекомендації по розмірам
+### Optimal dimensions:
 
-### Оптимальні розміри:
-- **Ширина:** 200-400px
-- **Висота:** будь-яка (автоматично масштабується)
-- **Формат:** PNG з прозорістю
-- **Співвідношення:** будь-яке (краще вертикальне або квадратне)
+* **Width:** 200-400px
+* **Height:** Any (scales automatically)
+* **Format:** PNG with transparency
+* **Aspect Ratio:** Any (vertical or square works best)
 
-### Приклади:
-- ✅ 200x200 (квадрат)
-- ✅ 250x450 (вертикальний)
-- ✅ 300x300 (квадрат)
-- ✅ 200x350 (вертикальний)
+### Examples:
 
-## 🎨 Як працює система
+* ✅ 200x200 (square)
+* ✅ 250x450 (vertical)
+* ✅ 300x300 (square)
+* ✅ 200x350 (vertical)
 
-### 1. Завантаження
+## 🎨 How the System Works
+
+### 1. Loading
+
 ```python
-# Програма шукає файл
+# The program looks for the specific file
 avatar_path = f"avatars/avatar_{emotion}.png"
 
-# Якщо не знайдено, використовує neutral
+# If not found, it falls back to neutral
 if not exists: use avatar_neutral.png
 
-# Якщо і neutral немає, показує емодзі
+# If neutral is also missing, it shows an emoji
 if not exists: show emoji fallback
+
 ```
 
-### 2. Масштабування
+### 2. Scaling
+
 ```python
-# Автоматичне масштабування
+# Automatic scaling
 max_width = 200px
-height = auto (пропорційно)
+height = auto (proportional)
 
-# Використовується LANCZOS для якості
+# LANCZOS filter is used for high quality
 Image.Resampling.LANCZOS
+
 ```
 
-### 3. Анімація
+### 3. Animation
+
 ```python
-# При зміні емоції:
-1. Збільшення до 220px (10%)
-2. Затримка 100ms
-3. Повернення до 200px
+# When the emotion changes:
+1. Scales up to 220px (10% increase)
+2. Delay of 100ms
+3. Returns to 200px
+
 ```
 
-## 🔄 Fallback система
+## 🔄 Fallback System
 
-### Рівень 1: Спроба завантажити емоцію
-```
+### Level 1: Attempt to load the emotion
+
+```text
 avatars/avatar_happy.png
+
 ```
 
-### Рівень 2: Якщо не знайдено, neutral
-```
+### Level 2: If not found, use neutral
+
+```text
 avatars/avatar_neutral.png
-```
-
-### Рівень 3: Якщо neutral немає, емодзі
-```
-😊 (текстовий емодзі)
-```
-
-## 💡 Поради
-
-### Для кращого вигляду:
-1. **Використовуйте PNG з прозорістю** - фон буде темно-синій (#16213e)
-2. **Центруйте зображення** - воно буде по центру панелі
-3. **Однаковий стиль** - всі аватари в одному стилі
-4. **Чіткі емоції** - легко розпізнавані вирази
-
-### Приклади стилів:
-- 🎨 Мультяшні персонажі
-- 🤖 Роботи з різними виразами
-- 😊 Стилізовані емодзі
-- 👤 Силуети з емоціями
-- 🎭 Маски з виразами
-
-## 🛠️ Створення аватарів
-
-### Варіант 1: Використати готові емодзі
-1. Знайдіть великі емодзі (512x512 або більше)
-2. Збережіть як PNG
-3. Назвіть відповідно до емоції
-
-### Варіант 2: Створити власні
-1. Використайте графічний редактор (Photoshop, GIMP, Figma)
-2. Створіть 10 варіантів з різними емоціями
-3. Експортуйте як PNG
-4. Назвіть файли правильно
-
-### Варіант 3: AI генерація
-1. Використайте DALL-E, Midjourney, Stable Diffusion
-2. Промпт: "robot avatar showing [emotion], simple, clean, transparent background"
-3. Згенеруйте 10 варіантів
-4. Збережіть та назвіть
-
-## 📝 Приклад промптів для AI
 
 ```
+
+### Level 3: If neutral is missing, use emoji
+
+```text
+😊 (text emoji)
+
+```
+
+## 💡 Tips
+
+### For the best look:
+
+1. **Use transparent PNGs** - the background underneath will be your dark GUI theme.
+2. **Center the image** - it will be centered inside the circular avatar panel.
+3. **Consistent style** - keep all avatars in the same art style.
+4. **Clear emotions** - use easily recognizable facial expressions.
+
+### Style Examples:
+
+* 🎨 Cartoon characters
+* 🤖 Robots with different expressions
+* 😊 Stylized emojis
+* 👤 Silhouettes with emotion icons
+* 🎭 Masks with expressions
+
+## 🛠️ Creating Avatars
+
+### Option 1: Use ready-made emojis
+
+1. Find high-resolution emojis (512x512 or larger).
+2. Save them as PNG files.
+3. Name them according to the emotion list.
+
+### Option 2: Create your own
+
+1. Use an image editor (Photoshop, GIMP, Figma).
+2. Create 10 variants with different emotions.
+3. Export them as PNGs with a transparent background.
+4. Name the files correctly.
+
+### Option 3: AI Generation
+
+1. Use DALL-E, Midjourney, or Stable Diffusion.
+2. Prompt: *"robot avatar showing [emotion], simple, clean, transparent background"*.
+3. Generate the variants.
+4. Save and rename them.
+
+## 📝 Example AI Prompts
+
+```text
 Neutral: "friendly robot avatar, neutral expression, simple design, transparent background"
 Happy: "friendly robot avatar, happy smiling, simple design, transparent background"
 Thinking: "friendly robot avatar, thinking pose, hand on chin, transparent background"
@@ -138,58 +159,66 @@ Angry: "friendly robot avatar, angry expression, red face, transparent backgroun
 Surprised: "friendly robot avatar, surprised expression, wide eyes, transparent background"
 Cool: "friendly robot avatar, cool expression, sunglasses, transparent background"
 Love: "friendly robot avatar, love expression, hearts, transparent background"
+
 ```
 
-## 🔍 Перевірка
+## 🔍 Testing & Troubleshooting
 
-### Чи правильно налаштовано?
-1. Запустіть `python yrok2_gui.py`
-2. Подивіться на аватар зверху
-3. Напишіть "Дякую" - має змінитися на happy
-4. Напишіть "Помилка" - має змінитися на sad
+### Is it set up correctly?
 
-### Якщо не працює:
-1. Перевірте назви файлів (маленькі літери!)
-2. Перевірте розширення (.png)
-3. Перевірте шлях (папка avatars поруч з yrok2_gui.py)
-4. Перевірте права доступу до файлів
+1. Run `python yrok2_gui.py`.
+2. Look at the avatar at the top.
+3. Type "Thank you" - it should change to *happy*.
+4. Type "Error" - it should change to *sad*.
 
-## 📊 Технічні деталі
+### If it's not working:
 
-### Підтримувані формати:
-- ✅ PNG (рекомендовано)
-- ✅ JPG/JPEG
-- ✅ GIF (перший кадр)
-- ❌ SVG (не підтримується)
+1. Check the file names (must be lowercase!).
+2. Check the file extension (`.png`).
+3. Check the folder path (the `avatars` folder must be right next to `yrok2_gui.py`).
+4. Check file access permissions.
 
-### Обробка:
+## 📊 Technical Details
+
+### Supported formats:
+
+* ✅ PNG (recommended)
+* ✅ JPG/JPEG
+* ✅ GIF (first frame only)
+* ❌ SVG (not supported)
+
+### Processing under the hood:
+
 ```python
-# Завантаження
+# Loading
 img = Image.open(avatar_path)
 
-# Масштабування
+# Scaling
 max_width = 200
 ratio = max_width / img.width
 new_height = int(img.height * ratio)
 img = img.resize((max_width, new_height), Image.Resampling.LANCZOS)
 
-# Конвертація
+# Conversion for GUI
 photo = ImageTk.PhotoImage(img, master=root)
+
 ```
 
-## 🎯 Швидкий старт
+## 🎯 Quick Start
 
-### Якщо у вас вже є аватари:
-1. Створіть папку `avatars` поруч з `yrok2_gui.py`
-2. Покладіть туди ваші PNG файли
-3. Переназвіть їх відповідно до списку вище
-4. Запустіть програму
+### If you already have avatars:
 
-### Якщо аватарів немає:
-1. Програма буде використовувати емодзі
-2. Все працюватиме як раніше
-3. Додайте аватари пізніше коли будуть готові
+1. Create an `avatars` folder next to your `yrok2_gui.py` file.
+2. Place your PNG files inside it.
+3. Rename them according to the table above.
+4. Run the program.
+
+### If you don't have avatars yet:
+
+1. The program will simply use standard text emojis.
+2. Everything will work perfectly just like before.
+3. You can add the real avatars later whenever they are ready.
 
 ---
 
-**Тепер ваш асистент може використовувати реальні зображення! 🎨✨**
+**Now your assistant can use real images! 🎨✨**
