@@ -1,151 +1,168 @@
-# 🎉 Оновлення GUI - Система емоцій
 
-## ✨ Що нового
 
-### 😊 Живі емоції асистента
-Асистент тепер має **10 різних емоцій**, які автоматично змінюються залежно від контексту розмови!
+```markdown
+# 🎉 GUI Update - Emotion System
 
-### 🎨 Візуальні покращення
+## ✨ What's New
 
-#### 1. Великий аватар
-- Розташований зверху над чатом
-- Розмір: 120px емодзі
-- Анімація при зміні емоції
-- Статус під аватаром
+### 😊 Live Assistant Emotions
+The assistant now has **10 different emotions** that change automatically depending on the conversation context!
 
-#### 2. Індикатор в заголовку
-- Маленький емодзі (24px)
-- Назва емоції з кольором
-- Показує поточний стан
+### 🎨 Visual Improvements
 
-#### 3. Нова структура
-```
+#### 1. Large Avatar
+- Located at the top above the chat
+- Size: 120px emoji
+- Animation when the emotion changes
+- Status below the avatar
+
+#### 2. Header Indicator
+- Small emoji (24px)
+- Emotion name with color
+- Shows the current state
+
+#### 3. New Structure
+```text
 ┌──────────────────────────────┐
-│  Заголовок + Емоція          │
+│  Header + Emotion            │
 ├──────────────────────────────┤
-│  Великий аватар 😊           │
+│  Large Avatar 😊             │
 ├──────────────────────────────┤
-│  Чат                         │
+│  Chat                        │
 ├──────────────────────────────┤
-│  Панель функцій              │
+│  Features Panel              │
 └──────────────────────────────┘
+
 ```
 
-## 😊 Емоції
+## 😊 Emotions
 
-| Емодзі | Назва | Коли |
-|--------|-------|------|
-| 😊 | Neutral | Звичайний стан |
-| 😄 | Happy | Подяка, привітання |
-| 🤔 | Thinking | Обробка запиту |
-| 😢 | Sad | Помилка |
-| 😠 | Angry | Роздратування |
-| 😲 | furious | Здивування |
+| Emoji | Name | When |
+| --- | --- | --- |
+| 😊 | Neutral | Normal state |
+| 😄 | Happy | Gratitude, greeting |
+| 🤔 | Thinking | Processing request |
+| 😢 | Sad | Error |
+| 😠 | Angry | Annoyance |
+| 😲 | furious | Surprise |
 
+## 🔄 Automatic Detection
 
-## 🔄 Автоматичне визначення
+The system analyzes:
 
-Система аналізує:
-- ✅ Повідомлення користувача
-- ✅ Відповідь асистента
-- ✅ Ключові слова
-- ✅ Контекст розмови
+* ✅ User message
+* ✅ Assistant response
+* ✅ Keywords
+* ✅ Conversation context
 
-## 🎯 Ключові слова
+## 🎯 Keywords
 
-**Happy:** дякую, спасибі, привіт
-**Sad:** помилка, error
-**furious:** не працює, не розумію
-**Angry:** злий, лютий
+**Happy:** thanks, thank you, hello
+**Sad:** mistake, error
+**furious:** not working, don't understand
+**Angry:** angry, mad
 
+## 🎨 Animations
 
-## 🎨 Анімації
+* Pulsation upon emotion change
+* Text color change
+* Status update
+* Smooth transitions
 
-- Пульсація при зміні емоції
-- Зміна кольору тексту
-- Оновлення статусу
-- Плавні переходи
+## 📊 Technical Changes
 
-## 📊 Технічні зміни
+### Added:
 
-### Додано:
 ```python
-# Емоції
+# Emotions
 EMOTIONS = {...}
 EMOTION_MAP = {...}
 
-# Функції
+# Functions
 detect_emotion()
 change_emotion()
 animate_emotion()
 
-# UI компоненти
+# UI components
 avatar_label
 emotion_label
 emotion_text
 avatar_status
+
 ```
 
-### Оновлено:
-- `process_message()` - додано визначення емоцій
-- `create_header()` - додано індикатор емоцій
-- `create_avatar_panel()` - новий компонент
-- Структура layout - аватар зверху
+### Updated:
 
-## 🚀 Як використовувати
+* `process_message()` - added emotion detection
+* `create_header()` - added emotion indicator
+* `create_avatar_panel()` - new component
+* Layout structure - avatar placed at the top
 
-1. **Запустіть асистента:**
-   ```bash
-   python yrok2_gui.py
-   ```
+## 🚀 How to Use
 
-2. **Спілкуйтесь як зазвичай**
-   - Асистент автоматично змінює емоції
+1. **Run the assistant:**
+```bash
+python yrok2_gui.py
 
-3. **Спостерігайте за аватаром**
-   - Великий емодзі показує поточну емоцію
-   - Статус описує стан
-
-4. **Використовуйте ключові слова**
-   - "Дякую" → 😄 Happy
-   - "Помилка" → 😢 Sad
-   - "Вау" → 😲 furious
-
-## 💡 Приклади
-
-### Приклад 1
-```
-Ви: Привіт! Як справи?
-Емоція: 😄 Happy
-Статус: "Радий допомогти!"
 ```
 
 
-## 📁 Файли
+2. **Chat as usual**
+* The assistant automatically changes emotions
 
-- `yrok2_gui.py` - оновлений GUI з емоціями
-- `EMOTIONS_GUIDE.md` - повний гайд по емоціях
-- `UPDATE_NOTES.md` - цей файл
 
-## 🎯 Переваги
+3. **Watch the avatar**
+* The large emoji shows the current emotion
+* The status describes the state
 
-✅ Інтерактивний досвід
-✅ Візуальний фідбек
-✅ Емоційний зв'язок
-✅ Автоматична система
-✅ Красиві анімації
-✅ 10 різних емоцій
-✅ Кольорові індикатори
 
-## 🔮 Майбутні покращення
+4. **Use keywords**
+* "Thank you" → 😄 Happy
+* "Error" → 😢 Sad
+* "Wow" → 😲 furious
 
-- [ ] Більше емоцій
-- [ ] Складніші анімації
-- [ ] Звукові ефекти
-- [ ] Історія емоцій
-- [ ] Налаштування емоцій
-- [ ] Власні емодзі
+
+
+## 💡 Examples
+
+### Example 1
+
+```text
+You: Hello! How are you doing?
+Emotion: 😄 Happy
+Status: "Happy to help!"
+
+```
+
+## 📁 Files
+
+* `yrok2_gui.py` - updated GUI with emotions
+* `EMOTIONS_GUIDE.md` - full guide on emotions
+* `UPDATE_NOTES.md` - this file
+
+## 🎯 Benefits
+
+✅ Interactive experience
+✅ Visual feedback
+✅ Emotional connection
+✅ Automatic system
+✅ Beautiful animations
+✅ 10 different emotions
+✅ Colored indicators
+
+## 🔮 Future Improvements
+
+* [ ] More emotions
+* [ ] More complex animations
+* [ ] Sound effects
+* [ ] Emotion history
+* [ ] Emotion settings
+* [ ] Custom emojis
 
 ---
 
-**Насолоджуйтесь новим емоційним асистентом! 😊🎉**
+**Enjoy the new emotional assistant! 😊🎉**
+
+```
+
+```
