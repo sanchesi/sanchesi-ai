@@ -1,23 +1,24 @@
 # SANCHESI AI 🤖✨
 
-SANCHESI AI — це сучасний open-source AI-асистент з мультичатингом, голосовим вводом та повноцінним Liquid Glass GUI на Tkinter.
+SANCHESI AI is a modern open-source AI assistant featuring multi-chatting, voice input, and a fully-featured Liquid Glass GUI built on Tkinter.
 
-## 🚀 Можливості
+## 🚀 Features
 
-- 🧠 Підключення до Groq API
-- 💬 Мультичатинг з автозбереженням
-- 🎭 Зміна характерів асистента
-- 🎤 Голосовий ввід (SpeechRecognition)
-- 🔊 Озвучка відповіді (gTTS + pygame)
-- 📝 Повна підтримка Markdown (заголовки, код, bold, italic)
-- 💾 Автозбереження історії
-- 🪟 Кастомний Glass UI
+- 🧠 Groq API integration
+- 💬 Multi-chatting with auto-save
+- 🎭 Assistant personality switching
+- 🎤 Voice input (SpeechRecognition)
+- 🔊 Assistant voice response (gTTS + pygame)
+- 📝 Full Markdown support (headers, code, bold, italic)
+- 💾 Chat history auto-save
+- 🪟 Custom Liquid Glass UI
 
 ---
 
-## 📦 Встановлення
+## 📦 Installation
 
-### 1️⃣ Клонування
+### 1️⃣ Cloning
 ```bash
-git clone https://github.com/your-username/sanchesi-ai.git
+git clone https://github.com/sanchesi/sanchesi-ai.git
+
 cd sanchesi-ai
