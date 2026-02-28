@@ -1,4 +1,4 @@
-Here is the complete and perfectly translated guide in English, keeping all the formatting, emojis, and code blocks exactly as requested!
+
 
 # 🎨 GUI Design Improvements
 
@@ -241,3 +241,4 @@ accent_red = "#ef4444"
 ---
 
 **Result:** A modern, bright, and user-friendly interface that is a pleasure to use! 🎉
+
